@@ -2,141 +2,426 @@
 <html>
 <head>
   <meta charset="utf-8">
-  
-  
   <title>网络安全学习笔记 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="referrer" content="no-referrer" > 
-  <meta name="description" content="1、cmd的注意事项在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了   2、ai的codeium的使用在使用ai的时候需要打开这个软件用edge使用扩展来连老师的IP地址然后使用老师的原理是老师花钱买的一个可以来链接到国外的ip通过老师这个节点我们来使用al如下图 3、软件下载的方法补充phps">
-<meta property="og:type" content="article">
-<meta property="og:title" content="网络安全学习笔记">
-<meta property="og:url" content="http://example.com/2024/07/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+  <meta name="keywords" content="">
+  <meta name="description" content="网络安全学习笔记 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="pageName">
+<meta property="og:url" content="http://example.com/pageName/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、cmd的注意事项在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了   2、ai的codeium的使用在使用ai的时候需要打开这个软件用edge使用扩展来连老师的IP地址然后使用老师的原理是老师花钱买的一个可以来链接到国外的ip通过老师这个节点我们来使用al如下图 3、软件下载的方法补充phps">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406562-a2ede100-dcee-404a-bffe-dedaa03d1920.png#averageHue=%23f1f1f1&id=Rb0kz&originHeight=83&originWidth=803&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406797-cce7db1b-0518-4c9d-b32f-5e08254d0e0b.png#averageHue=%231d1d1d&id=cDLAf&originHeight=104&originWidth=603&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406999-afc08612-a024-4786-969c-333fc32a33cd.png#averageHue=%2321201f&id=uF7NF&originHeight=182&originWidth=391&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407148-4eee74c4-ece2-4e0d-ba8b-57d53690629e.png#averageHue=%23f5f5f5&id=OfZaZ&originHeight=139&originWidth=1324&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407349-bd005ad6-7f2c-4a29-9ae1-8d0375745650.png#averageHue=%23f6f6f6&id=aNdAK&originHeight=92&originWidth=513&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407591-8148aa12-2b4f-43c4-881b-f1ef6cebb4f2.png#averageHue=%23f9f7ef&id=UNdfY&originHeight=506&originWidth=820&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407859-6c6874f7-f8bb-43ce-a710-04ec3b3abed1.png#averageHue=%23f9f7f2&id=iqgcT&originHeight=502&originWidth=816&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408147-037cfa43-7a6b-4359-a684-7db69cff5b0c.png#averageHue=%23f8f6f0&id=uGK5P&originHeight=505&originWidth=812&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408420-0174f679-6eff-410f-bd30-2d6454ee168d.png#averageHue=%23f6f5f4&id=ZrRsO&originHeight=785&originWidth=829&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408613-639d629d-4295-40d6-9a1d-a1f346f8fd95.png#averageHue=%23f6f5f3&id=GJmIP&originHeight=596&originWidth=1269&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408885-6a3fe541-8781-4173-9837-35aaa5ec1b1d.png#averageHue=%23f5f3f3&id=X2YQG&originHeight=664&originWidth=671&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409029-719ab6c2-529f-4812-8657-c91ac1c2673f.png#averageHue=%23eeeded&id=eXjZw&originHeight=538&originWidth=747&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409220-32778f7e-bf1f-4ffd-9433-7205dccfb5be.png#averageHue=%23faf9f8&id=ihuGD&originHeight=746&originWidth=838&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409510-75adfba9-7578-42e7-a0d1-58ea6dee97c8.png#averageHue=%2330353b&id=oC09V&originHeight=667&originWidth=1087&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409766-ab529bc3-c155-43ff-b097-c7da53555202.png#averageHue=%23faf8f7&id=VkLzi&originHeight=124&originWidth=641&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409976-c11fa210-5f7e-4006-9f13-13d83dff4a50.png#averageHue=%23faf9f7&id=Ss0pr&originHeight=630&originWidth=1270&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410277-d5ee92ca-9699-4b7a-9747-c4b428610a01.png#averageHue=%23c2bb4a&id=jfkdn&originHeight=937&originWidth=825&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410498-a91ad0d5-c0bf-4045-9b57-4ef4f4b152ec.png#averageHue=%232a5957&id=lORTx&originHeight=90&originWidth=93&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410653-e89e5e4f-5ec5-4477-9feb-d9844b91dae5.png#averageHue=%23252a31&id=hsNyX&originHeight=94&originWidth=634&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410831-bd1ea3ff-a36f-4922-b2e6-74ef260ec2c8.png#averageHue=%232f343e&id=v5ZfP&originHeight=84&originWidth=845&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411069-a4d5cd40-5aaa-4cb1-9967-e6597d11506a.png#averageHue=%23f9f5f1&id=eIluG&originHeight=79&originWidth=80&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411284-2c294439-0de0-4ec0-9a9c-3ee88e3ef04c.png#averageHue=%23f7f6f5&id=r2fKT&originHeight=491&originWidth=1061&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411434-969e896f-9b56-4d76-b65f-beceb36ff048.png#averageHue=%23f0eeed&id=mHWjU&originHeight=157&originWidth=270&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411584-3d46a5fd-d175-43bb-b60c-13f74759f5f7.png#averageHue=%23f3f3f3&id=tqvuz&originHeight=304&originWidth=506&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411769-1f1c6349-6955-4f75-91dd-876eeba316d0.png#averageHue=%23e7eae8&id=cu6FP&originHeight=470&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411986-67f30933-5cfd-4bd4-9a7f-e050e4550d26.png#averageHue=%23f2f1ec&id=WbyHO&originHeight=475&originWidth=643&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608412198-7b68b3ba-2084-4282-a90d-712e8b378b90.png#averageHue=%23f9f8f8&id=KjpPM&originHeight=818&originWidth=1178&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608412577-aa68b115-87d8-413d-b7ff-8a481302e9e4.png#averageHue=%23f9f8f7&id=jgLhM&originHeight=1039&originWidth=1227&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608412922-5bbf7acc-637f-4b61-97ab-c72acf196edd.png#averageHue=%23adb1a8&id=qSN0h&originHeight=1020&originWidth=1070&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608413255-d16d0ae5-8100-4c6f-8452-4565d963aa6d.png#averageHue=%23f6f5f4&id=CiJBI&originHeight=809&originWidth=1118&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608413638-c3147eb7-8bda-4b40-b615-8f8270099e95.png#averageHue=%23fbfafa&id=UskyN&originHeight=1281&originWidth=1372&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608413978-8c7abb1a-2c55-4718-b220-5ae14df90572.png#averageHue=%23a9d6c8&id=nkf69&originHeight=784&originWidth=779&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608414338-b26478ce-a87a-48e2-ad5c-b5a1c677a5f6.png#averageHue=%23374148&id=i0XWr&originHeight=452&originWidth=1445&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608414620-2f386c52-7a36-4911-8c96-e2536e887bf9.png#averageHue=%23fefefe&id=APOZb&originHeight=180&originWidth=571&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608414849-572d99b6-7c92-4ce5-97ec-37779183b151.png#averageHue=%23fefefe&id=Xkzeo&originHeight=1022&originWidth=1054&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608415180-3047b3d1-c515-435f-8abb-7f84ea4bffd7.png#averageHue=%23e4e0cf&id=b3fPj&originHeight=395&originWidth=1002&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720611376650-121a8601-15ca-44a9-a8f4-761b77f62515.png#averageHue=%23f3f3f2&clientId=u5199405e-cf93-4&from=paste&height=288&id=u6317a16c&originHeight=463&originWidth=572&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&size=47638&status=done&style=none&taskId=u567f0a8e-3ede-454b-a00a-338198afb38&title=&width=355.99078369140625">
-<meta property="og:image" content="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303232317116.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_23,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#id=flcc2&originHeight=389&originWidth=815&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303232317280.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_35,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#id=EKhuG&originHeight=529&originWidth=1234&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/26698826/1720595849698-166317e8-381d-4e54-88b5-d0a2a7ec7d5c.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_15,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23100605&from=url&id=FAJuc&originHeight=298&originWidth=543&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303232317329.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_18,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#from=url&id=v0hJy&originHeight=257&originWidth=624&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303271424650.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_33,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#from=url&id=HZuTX&originHeight=741&originWidth=1159&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303271424773.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_48,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#from=url&id=tgttM&originHeight=683&originWidth=1694&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="article:published_time" content="2024-07-10T12:02:27.000Z">
-<meta property="article:modified_time" content="2024-07-10T12:03:31.000Z">
+<meta property="article:published_time" content="2024-07-10T10:20:34.000Z">
+<meta property="article:modified_time" content="2024-07-10T10:20:34.721Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406562-a2ede100-dcee-404a-bffe-dedaa03d1920.png#averageHue=%23f1f1f1&id=Rb0kz&originHeight=83&originWidth=803&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-  
-  
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
 <meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-网络安全学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2024-07-10T12:02:27.000Z" itemprop="datePublished">2024-07-10</time>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      网络安全学习笔记
-    </h1>
-  
+<div class="author">
+    <span>John Doe</span>
+</div>
 
-      </header>
+<div class="icon">
     
-    <div class="e-content article-entry" itemprop="articleBody">
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="instagram"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="reddit"
+               href="https://www.reddit.com/user/yelog/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-reddit"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/u/2307534817"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/ff56736de7cf"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/jaytp/activities"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:jaytp@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=88151013"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(4)</small>
+            
+        </div>
+    </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="4">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All "
+           href="/2024/07/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="网络安全学习笔记">网络安全学习笔记</span>
+            <span class="post-date" title="2024-07-10 20:02:27">2024/07/10</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/07/10/lyr/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="lyr">lyr</span>
+            <span class="post-date" title="2024-07-10 18:08:57">2024/07/10</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/07/10/test-my-site/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="test_my_site">test_my_site</span>
+            <span class="post-date" title="2024-07-10 15:30:30">2024/07/10</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/07/10/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2024-07-10 15:25:09">2024/07/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-网络安全学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">网络安全学习笔记</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-07-10 20:03:31'>2024-07-10 20:02</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81cmd%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">1、cmd的注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81ai%E7%9A%84codeium%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">2、ai的codeium的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%96%B9%E6%B3%95%E8%A1%A5%E5%85%85"><span class="toc-text">3、软件下载的方法补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">4、虚拟机的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="toc-text">5、重装系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E4%BB%A3%E7%90%86%E7%9A%84%E8%B4%AD%E4%B9%B0%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="toc-text">6 代理的购买与应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%B7%A5%E4%BD%9C%E9%9C%80%E6%B1%82"><span class="toc-text">1、工作需求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E6%B0%B8%E6%81%92%E4%B9%8B%E9%BB%91%E8%93%9D%E5%B1%8F"><span class="toc-text">8、永恒之黑蓝屏</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81poc%EF%BC%88%E8%93%9D%E5%B1%8F%EF%BC%89%EF%BC%89%EF%BC%88%E8%A7%82%E7%82%B9%E9%AA%8C%E8%AF%81%E8%84%9A%E6%9C%AC%EF%BC%89"><span class="toc-text">1、poc（蓝屏））（观点验证脚本）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81exp-rec"><span class="toc-text">2、exp(rec)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E8%AE%B2%E8%A7%A3"><span class="toc-text">9、计算机网络的讲解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%94%B5%E8%84%91IP%E8%AE%B2%E8%A7%A3"><span class="toc-text">1、电脑IP讲解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%89%AB%E6%8F%8Fip%E5%9C%B0%E5%9D%80"><span class="toc-text">2、扫描ip地址</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10%E3%80%81%E5%88%A9%E7%94%A8github%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2"><span class="toc-text">10、利用github搭建hexo博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E5%87%86%E5%A4%87%E5%89%8D%E6%8F%90"><span class="toc-text">1、准备前提</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="toc-text">2、操作步骤</span></a>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
       
         <p><a name="JeWxV"></a></p>
 <h2 id="1、cmd的注意事项"><a href="#1、cmd的注意事项" class="headerlink" title="1、cmd的注意事项"></a>1、cmd的注意事项</h2><p>在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了<br />在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了</p>
@@ -306,120 +591,193 @@
 </ol>
 
       
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="clyfsoc84000010urgrihd7p6" data-title="网络安全学习笔记" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2024/07/10/lyr/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">lyr</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
-    </div>
-  </div>
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/07/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">网络安全学习笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/10/lyr/">lyr</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/10/test-my-site/">test_my_site</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/10/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
+
+
+
+    
+
+
+
 
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
 
 
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
 </body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
 </html>
